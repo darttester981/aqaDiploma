@@ -19,7 +19,11 @@ export class AuthorizationPage {
     await this.passwordInput.click();
     await this.passwordInput.fill(password);
 
-    await this.loginButton.click();
+  //  await this.loginButton.click();
+    await Promise.all([
+    this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 15000 }),
+    this.loginButton.click()
+]);
 }
   
 

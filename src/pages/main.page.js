@@ -6,14 +6,9 @@ export class MainPage {
   constructor(page) {
     this.page = page;
 
-    this.signupLink = page
-      .getByRole('link', { name: 'Sign up' })
-      .describe('Кнопка//cсылка зарегистрироваться');
+    this.signupLink = page.getByRole('link', { name: 'Sign up' });
 
-    this.loginLink = page
-      .getByRole('link', { name: 'Login' })
-      .describe('Кнопка//cсылка залогиниться');
-  }
+    this.loginLink = page.getByRole('link', { name: 'Login' })};
 
   
   // бизнесовые действия со страницей
@@ -26,7 +21,9 @@ export class MainPage {
     this.signupLink.click();
   }
 
+
   async open(url) {
     await this.page.goto(url);
   }
 }
+
