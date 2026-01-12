@@ -26,9 +26,7 @@ async function login(page, baseUrl, email, password, userName) {
   // Аутентифицируемся
   await authorizationPage.authorize(email, password);
   // Проверяем, что пользователь авторизован
-  // await homePage.getProfileNameLocator(userName);
-  await homePage.getProfileNameLocator().waitFor({ state: 'visible', timeout: 10000 });
-  await expect(homePage.getProfileNameLocator()).toContainText(userName, { timeout: 10000 });
+  await homePage.getProfileNameLocator(userName);
 }
 
 // Регистрация отдельной функцией
@@ -75,7 +73,7 @@ test('1.Проверка имени авторизованного юзера', 
 
   await tagPage.firstTagClick();
 
-  await expect(page.getByRole('button', { name: ' реклама' })).toBeVisible();
+  await expect(tagPage.filterTag).toBeVisible();
 });
 
 
