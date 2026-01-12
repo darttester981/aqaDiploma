@@ -7,6 +7,7 @@ export class HomePage {
     this.articleCreateLink = page.locator('a', { hasText: 'New Article' });
     this.settingsLink = page.getByRole('link', { name: 'Settings' });
     this.logoutLink = page.getByRole('link', { name: 'Logout' });
+    this.editArtickleLink = page.getByRole('link', { name: ' Edit Article' });
   }
 
   // бизнесовые действия со страницей
@@ -31,5 +32,11 @@ export class HomePage {
    getProfileNameLocator() {
     return this.profileName;
   }
+
+  // переход в редактирование статьи
+  async gotoEditArticle() {
+  await this.editArtickleLink.nth(1).click();
+  }  
+
 }
 

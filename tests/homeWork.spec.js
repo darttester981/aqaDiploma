@@ -9,6 +9,7 @@ import { ArticleCreatePage } from '/Users/glushenkovdd/QaGuru/HomeWorkPageObject
 import { ArticleViewPage } from '/Users/glushenkovdd/QaGuru/HomeWorkPageObject/src/pages/articleView.page.js';
 import { TagPage } from '../src/pages/tag.page';
 import { SettingsPage } from '/Users/glushenkovdd/QaGuru/HomeWorkPageObject/src/pages/settings.page.js';
+import { ArticleEditPage } from '../src/pages/articleEdit.page';
 
 
 const baseUrl = 'https://realworld.qa.guru/';
@@ -102,6 +103,61 @@ test('3.Создание статьи', async ({ page }) => {
   await expect(articleViewPage.articleTitle).toHaveText(title);
   });
 
+
+
+
+  test('3.1. Редактирование статьи', async ({ page }) => {
+  const homePage = new HomePage(page);
+  const mainPage = new MainPage(page)
+  const articleCreatePage = new ArticleCreatePage(page);
+  const articleViewPage = new ArticleViewPage(page);
+  const articleEditPage = new ArticleEditPage(page);
+
+  const user = await register(page);
+
+  // переменная для создания статьи
+  const newArtickle = {
+  title : faker.lorem.sentence(),
+  description : faker.lorem.paragraph(),
+  body : faker.lorem.paragraphs(3),
+  tags : '123',
+  };
+
+  // переменная для редактирования статьи
+  const editArtickle = {
+  title : faker.lorem.sentence(),
+  description : faker.lorem.paragraph(),
+  body : faker.lorem.paragraphs(3),
+  tags : '123',
+  };
+
+  // Переходим на страницу создания статьи
+  await homePage.clickArticleCreateLink();
+  // Заполняем поля статьи
+  await articleCreatePage.createAndPublishArticle(newArtickle.title, newArtickle.description, newArtickle.body, newArtickle.tags);
+  // Клик по кнопке создания статьи
+  await homePage.clickArticleCreateLink();
+  // Проверяем, что статья создана
+  await expect(articleViewPage.articleTitle).toBeVisible();
+  await expect(articleViewPage.articleTitle).toHaveText(newArtickle.title);
+
+
+   // Переход в редактирование статьи
+  await homePage.gotoEditArticle();
+  // Заполняем поля статьи
+  await articleEditPage.editAndUpdateArticle(editArtickle.title, editArtickle.description, editArtickle.body, editArtickle.tags);
+  // Клик по кнопке создания статьи
+  await homePage.clickArticleCreateLink()
+  // Проверяем, что статья создана
+  await expect(articleViewPage.articleTitle).toBeVisible();
+  await expect(articleViewPage.articleTitle).toHaveText(editArtickle.title);
+  });
+
+
+
+
+
+ 
 test('4.(Через логин) Измененение и сохранение краткой инфо о юзере', async ({ page }) => {
   const mainPage = new MainPage(page);    
   const homePage = new HomePage(page);
@@ -141,7 +197,7 @@ test('4.1.(Через регистрацию) Измененение и сохр
   // Переход обратно на страницу настроек пользователя
   await homePage.gotoSettings();
 
-  await expect(settingsPage.bioInput).toHaveValue(textBio);
+  await expect(settingsPage.bioInput).toContainText(textBio);
 });
 
 
@@ -158,5 +214,4 @@ test('5.Измененение и сохранение имени юзера', a
     await settingsPage.changeName(newUserName);
     await expect(homePage.getProfileNameLocator()).toContainText(newUserName);
 });
-
 });

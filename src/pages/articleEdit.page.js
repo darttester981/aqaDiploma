@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 
-export class ArticleCreatePage {
+export class ArticleEditPage {
     // техническое описание страницы
     
     constructor(page) {
@@ -9,7 +9,7 @@ export class ArticleCreatePage {
         this.descriptionInput = page.getByPlaceholder("What's this article about?");
         this.bodyInput = page.getByPlaceholder('Write your article (in markdown)');
         this.tagInput = page.getByPlaceholder('Enter tags');
-        this.publishButton = page.getByRole('button', { name: 'Publish Article' });
+        this.updateButton = page.getByRole('button', { name: 'Update Article' })
     }
 
      // Заполнение полей при создании статьи
@@ -33,25 +33,24 @@ export class ArticleCreatePage {
         await expect(this.tagInput).toHaveValue(tags);
     }
 
-    // Нажимаем кнопку "Publish Article"
+    // Нажимаем кнопку "Update Article"
      
-    async clickPublishButton() {
-        await this.publishButton.click();
+    async clickUpdateButton() {
+        await this.updateButton.click();
     }
 
-
-     // Создание и публикация новой статьи
-     // Объединяет заполнение полей и публикацию статьи
+    // Редактирование и сохранение статьи
+     // Объединяет заполнение полей и сохранение статьи
     
-    async createAndPublishArticle(title, description, body, tags) {
+    async editAndUpdateArticle(title, description, body, tags) {
         
         // Заполняем все поля статьи
         await this.fillArticleFields(title, description, body, tags);
         
         // Публикуем статью
-        await this.clickPublishButton();
+        await this.clickUpdateButton();
         
-        // Ждем загрузки страницы после публикации
+        // Ждем загрузки страницы после обновления
         await this.page.waitForLoadState('domcontentloaded');
     }
 }
