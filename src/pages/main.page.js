@@ -1,30 +1,34 @@
-import { expect } from '@playwright/test';
-
 export class MainPage {
-  // техническое описание страницы
-
+  // ТЕХНИЧЕСКОЕ ОПИСАНИЕ СТРАНИЦЫ:
   constructor(page) {
     this.page = page;
+    this.logoLink = page.getByRole('link', { name: 'Логотип' });
+    this.valueLink = page.getByRole('link', { name: 'Это выгодно!' });
+    this.weekendLink = page.getByRole('link', { name: 'Выходные' });
+    this.destinyLink = page.getByRole('link', { name: 'Маршруты', exact: true });
+    this.afishaLink = page.getByRole('link', { name: 'Афиша' });
+    this.referenceLink = page.getByLabel('header').getByRole('link', { name: 'Справочная' });
+    this.guideLink = page.getByRole('link', { name: 'Путеводитель', exact: true });
+    this.loginLink = page.getByRole('button', { name: 'Войти' });
+  }
 
-    this.signupLink = page.getByRole('link', { name: 'Sign up' });
+  // БИЗНЕСОВЫЕ ДЕЙСТВИЯ СО СТРАНИЦЕЙ:
+  // переходы на страницы
+  async gotoMain() {
+    await this.logoLink.click();
+  }
 
-    this.loginLink = page.getByRole('link', { name: 'Login' })};
+  // открыть страницу
+  async open(url = '/') {
+    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+  }
 
   
-  // бизнесовые действия со страницей
+  // async open(url) {
+  //   await this.page.goto(url, {
+  //     waitUntil: 'domcontentloaded',
+  //   });
 
-  // переход на страницу логина
-  async gotoLogin() {
-    this.loginLink.click();
-  }
-  // переход на страницу регистрации
-  async gotoRegister() {
-    this.signupLink.click();
-  }
-
-  // открыть страницу 
-  async open(url) {
-    await this.page.goto(url);
-  }
+    
 }
 
