@@ -26,4 +26,23 @@ export class HeaderComponent {
     await expect(this.guideLink).toBeVisible();
     await expect(this.loginButton).toBeVisible();
   }
+
+  async expectNavigationHasCorrectText() {
+    await expect(this.dealsLink).toContainText('Это выгодно!');
+    await expect(this.weekendLink).toContainText('Выходные');
+    await expect(this.routesLink).toContainText('Маршруты');
+    await expect(this.posterLink).toContainText('Афиша');
+    await expect(this.helpLink).toContainText('Справочная');
+    await expect(this.guideLink).toContainText('Путеводитель');
+    await expect(this.loginButton).toContainText('Войти');
+  }
+
+  async expectNavigationHasCorrectHrefs() {
+    await expect(this.dealsLink).toHaveAttribute('href', 'https://www.tutu.ru/juicy-offers/');
+    await expect(this.weekendLink).toHaveAttribute('href', 'https://www.tutu.ru/weekend/');
+    await expect(this.routesLink).toHaveAttribute('href', 'https://provereno.tutu.ru/');
+    await expect(this.posterLink).toHaveAttribute('href', 'https://www.tutu.ru/afisha/');
+    await expect(this.helpLink).toHaveAttribute('href', 'https://www.tutu.ru/2read/');
+    await expect(this.guideLink).toHaveAttribute('href', 'https://www.tutu.ru/geo/');
+  }
 }
