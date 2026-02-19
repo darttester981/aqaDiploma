@@ -81,5 +81,6 @@ test.describe('Main page', () => {
     await expect(page.locator('[data-ti="trip-dates"]')).toHaveValue('');
     await page.getByRole('button', { name: 'Найти авиабилеты' }).click();
     await expect(page.locator('[data-ti="tooltip"]')).toBeVisible();
+
   });
 });
