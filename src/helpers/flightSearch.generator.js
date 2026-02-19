@@ -30,3 +30,9 @@ export function generateFlightSearchData() {
   return flight;
 }
 
+// Генератор типа транспорта для API тестов
+export function generateTransportType() {
+  const transportTypes = ['ptt', 'train', 'bus'];
+  return faker.helpers.arrayElement(transportTypes);
+}
+

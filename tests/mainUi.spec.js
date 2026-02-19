@@ -24,7 +24,7 @@ test.describe('Main page', () => {
     await app.mainSearch.expectDatesEmpty();
     await app.mainSearch.submitSearch();
     await app.mainSearch.expectTooltipVisible('Выберите дату вылета');
-    await app.mainSearch.expectTooltipHidden();
+    await app.mainSearch.expectTooltipHidden1();
   });
 
   test('5.Вариант предыдущего теста с ручным заполнением полей с генератором', async ({ app }) => {
