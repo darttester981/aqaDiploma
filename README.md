@@ -279,7 +279,7 @@ test('Example', async ({ app }) => {
 
 ## 👤 Автор
 
-**Гдущенков Дмитрий**
+**Давыдов Даниил**
 
 GitHub: [@darttester981](https://github.com/darttester981)
 
@@ -293,5 +293,3 @@ GitHub: [@darttester981](https://github.com/darttester981)
 - [Faker.js Documentation](https://fakerjs.dev/)
 
 ---
-
-⭐ Если проект был полезен, поставьте звезду!
