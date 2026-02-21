@@ -1,0 +1,952 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner "header" [ref=e3]:
+      - generic [ref=e5]:
+        - link "Логотип" [ref=e7] [cursor=pointer]:
+          - /url: https://www.tutu.ru/
+          - img [ref=e8]
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - list [ref=e13]:
+              - listitem [ref=e14]:
+                - link "Это выгодно!" [ref=e15] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/juicy-offers/
+              - listitem [ref=e16]:
+                - link "Выходные" [ref=e17] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/weekend/
+              - listitem [ref=e18]:
+                - link "Маршруты" [ref=e19] [cursor=pointer]:
+                  - /url: https://provereno.tutu.ru/
+              - listitem [ref=e20]:
+                - link "Афиша" [ref=e21] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/afisha/
+              - listitem [ref=e22]:
+                - link "Справочная" [ref=e23] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/2read/
+              - listitem [ref=e24]:
+                - link "Путеводитель" [ref=e25] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/geo/
+          - listitem [ref=e26]:
+            - button " Войти" [ref=e27] [cursor=pointer]:
+              - generic [ref=e28]:
+                - generic [ref=e31]: 
+                - generic [ref=e34]: Войти
+          - listitem [ref=e35]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - text: 
+                - button "Открыть меню" [ref=e39] [cursor=pointer]:
+                  - generic [ref=e41]: 
+              - text:         
+    - link "Inline banner image" [ref=e51] [cursor=pointer]:
+      - /url: https://c.tutu.ru/cashback100
+      - img "Inline banner image" [ref=e53]
+    - generic [ref=e56]:
+      - heading "Путешествуйте к лучшему с Туту" [level=2] [ref=e57]
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - button "100% кешбэк  Отели" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61]:
+              - img [ref=e63]
+              - generic [ref=e66]: 100% кешбэк
+              - img [ref=e68]
+            - generic [ref=e71]: 
+            - generic [ref=e72]: Отели
+          - button " Авиабилеты" [ref=e73] [cursor=pointer]:
+            - generic [ref=e75]: 
+            - generic [ref=e76]: Авиабилеты
+          - button " Ж/д билеты" [ref=e77] [cursor=pointer]:
+            - generic [ref=e79]: 
+            - generic [ref=e80]: Ж/д билеты
+          - button " Автобусы" [ref=e81] [cursor=pointer]:
+            - generic [ref=e83]: 
+            - generic [ref=e84]: Автобусы
+          - generic [ref=e85] [cursor=pointer]:
+            - generic [ref=e87]: 
+            - link "Электрички" [ref=e88]:
+              - /url: https://www.tutu.ru/prigorod/
+          - button " Туры" [ref=e89] [cursor=pointer]:
+            - generic [ref=e91]: 
+            - generic [ref=e92]: Туры
+          - generic [ref=e93] [cursor=pointer]:
+            - generic [ref=e95]: 
+            - link "Аренда авто" [ref=e96]:
+              - /url: https://avto.tutu.ru
+          - button " Джарвел" [ref=e97] [cursor=pointer]:
+            - generic [ref=e99]: 
+            - generic [ref=e100]: Джарвел
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - textbox "Откуда" [ref=e108] [cursor=pointer]:
+                    - /placeholder: " "
+                    - text: Казань
+                  - generic: Откуда
+                - text: 
+              - generic [ref=e109]:
+                - button "Москва" [ref=e110] [cursor=pointer]:
+                  - generic [ref=e111]: Москва
+                - button "Санкт-Петербург" [ref=e112] [cursor=pointer]:
+                  - generic [ref=e113]: Санкт-Петербург
+            - text: 
+            - button "Поменять местами отправление и прибытие" [ref=e114] [cursor=pointer]:
+              - generic [ref=e118]: 
+            - generic [ref=e119]:
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - textbox "Куда" [ref=e123] [cursor=pointer]:
+                    - /placeholder: " "
+                    - text: Екатеринбург
+                  - generic: Куда
+                - text: 
+              - generic [ref=e124]:
+                - button "Санкт-Петербург" [ref=e125] [cursor=pointer]:
+                  - generic [ref=e126]: Санкт-Петербург
+                - button "Москва" [ref=e127] [cursor=pointer]:
+                  - generic [ref=e128]: Москва
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e133]:
+                  - generic [ref=e134]:
+                    - textbox "Когда" [ref=e135]:
+                      - /placeholder: " "
+                      - text: 22 фев, вс
+                    - generic: Когда
+                  - text: 
+                - generic [ref=e136]:
+                  - button "Сегодня" [ref=e137] [cursor=pointer]:
+                    - generic [ref=e138]: Сегодня
+                  - button "Завтра" [ref=e139] [cursor=pointer]:
+                    - generic [ref=e140]: Завтра
+              - generic [ref=e141]:
+                - generic [ref=e143]:
+                  - generic [ref=e144]:
+                    - textbox "Обратно" [ref=e145]:
+                      - /placeholder: " "
+                    - generic: Обратно
+                  - text: 
+                - generic [ref=e146]:
+                  - button "Завтра" [ref=e147] [cursor=pointer]:
+                    - generic [ref=e148]: Завтра
+                  - button "Послезавтра" [ref=e149] [cursor=pointer]:
+                    - generic [ref=e150]: Послезавтра
+            - generic [ref=e152]:
+              - text: 
+              - generic [ref=e154]:
+                - generic [ref=e155]:
+                  - textbox "Кто летит" [ref=e156]:
+                    - /placeholder: " "
+                    - text: 3 пасс, эконом
+                  - generic: Кто летит
+                - text: 
+            - button "Найти авиабилеты" [active] [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]: Найти авиабилеты
+          - generic [ref=e161] [cursor=pointer]:
+            - generic [ref=e164]: Искать отели в новой вкладке
+            - checkbox "Искать отели в новой вкладке" [ref=e167]
+    - main [ref=e168]:
+      - generic [ref=e171]:
+        - link "Найдём билет на поезд за вас Найдём билет на поезд за вас Даже если сейчас нет мест Искать билеты" [ref=e178] [cursor=pointer]:
+          - /url: https://www.tutu.ru/poezda/
+          - generic [ref=e179]:
+            - img "Найдём билет на поезд за вас" [ref=e181]
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e185]: Найдём билет на поезд за вас
+                - generic [ref=e187]: Даже если сейчас нет мест
+              - link "Искать билеты" [ref=e188]:
+                - generic [ref=e189]: Искать билеты
+        - generic [ref=e191]:
+          - generic [ref=e193]:
+            - generic [ref=e195]: Это выгодно!
+            - generic [ref=e197]: Цены ниже средних за последние 10 дней. Обновляем постоянно, заглядывайте чаще
+          - generic [ref=e198]:
+            - generic [ref=e201]:
+              - link "Казань — Москва 9 мар в 06:50 1ч 55м · прямой · без багажа · невозвратный 3 ⁠837 ⁠₽ -36% 6 ⁠089 ⁠₽" [ref=e203] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D1532404748794200128
+                - generic [ref=e204]:
+                  - generic [ref=e208]:
+                    - generic [ref=e210]: Казань — Москва 9 мар в 06:50
+                    - generic [ref=e212]: 1ч 55м · прямой · без багажа · невозвратный
+                  - generic [ref=e215]:
+                    - generic [ref=e218]:
+                      - generic [ref=e219]: 3 ⁠837 ⁠₽
+                      - generic [ref=e223]: "-36%"
+                    - generic [ref=e227]: 6 ⁠089 ⁠₽
+              - link "Самара — Москва 9 мар в 07:20 2ч · прямой 4 ⁠917 ⁠₽ -13% 5 ⁠717 ⁠₽" [ref=e229] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D2135887098861850626
+                - generic [ref=e230]:
+                  - generic [ref=e234]:
+                    - generic [ref=e236]: Самара — Москва 9 мар в 07:20
+                    - generic [ref=e238]: 2ч · прямой
+                  - generic [ref=e241]:
+                    - generic [ref=e244]:
+                      - generic [ref=e245]: 4 ⁠917 ⁠₽
+                      - generic [ref=e249]: "-13%"
+                    - generic [ref=e253]: 5 ⁠717 ⁠₽
+              - link "Москва — Иркутск 24 мар в 19:30 5ч 50м · прямой 11 ⁠974 ⁠₽ -12% 13 ⁠699 ⁠₽" [ref=e255] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D2487431752587415070
+                - generic [ref=e256]:
+                  - generic [ref=e260]:
+                    - generic [ref=e262]: Москва — Иркутск 24 мар в 19:30
+                    - generic [ref=e264]: 5ч 50м · прямой
+                  - generic [ref=e267]:
+                    - generic [ref=e270]:
+                      - generic [ref=e271]: 11 ⁠974 ⁠₽
+                      - generic [ref=e275]: "-12%"
+                    - generic [ref=e279]: 13 ⁠699 ⁠₽
+              - link "Санкт-Петербург — Москва 23 фев в 00:40 1ч 30м · прямой 3 ⁠806 ⁠₽ -15% 4 ⁠481 ⁠₽" [ref=e281] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D2198691203040412637
+                - generic [ref=e282]:
+                  - generic [ref=e286]:
+                    - generic [ref=e288]: Санкт-Петербург — Москва 23 фев в 00:40
+                    - generic [ref=e290]: 1ч 30м · прямой
+                  - generic [ref=e293]:
+                    - generic [ref=e296]:
+                      - generic [ref=e297]: 3 ⁠806 ⁠₽
+                      - generic [ref=e301]: "-15%"
+                    - generic [ref=e305]: 4 ⁠481 ⁠₽
+              - link "Сочи — Москва 23 фев в 22:30 3ч 25м · прямой 4 ⁠499 ⁠₽ -15% 5 ⁠297 ⁠₽" [ref=e307] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D1442086465642169165
+                - generic [ref=e308]:
+                  - generic [ref=e312]:
+                    - generic [ref=e314]: Сочи — Москва 23 фев в 22:30
+                    - generic [ref=e316]: 3ч 25м · прямой
+                  - generic [ref=e319]:
+                    - generic [ref=e322]:
+                      - generic [ref=e323]: 4 ⁠499 ⁠₽
+                      - generic [ref=e327]: "-15%"
+                    - generic [ref=e331]: 5 ⁠297 ⁠₽
+              - link "Минеральные Воды — Москва 23 фев в 20:35 3ч 10м · прямой · без багажа · невозвратный 4 ⁠720 ⁠₽ -5% 5 ⁠020 ⁠₽" [ref=e333] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D18948983393092306
+                - generic [ref=e334]:
+                  - generic [ref=e338]:
+                    - generic [ref=e340]: Минеральные Воды — Москва 23 фев в 20:35
+                    - generic [ref=e342]: 3ч 10м · прямой · без багажа · невозвратный
+                  - generic [ref=e345]:
+                    - generic [ref=e348]:
+                      - generic [ref=e349]: 4 ⁠720 ⁠₽
+                      - generic [ref=e353]: "-5%"
+                    - generic [ref=e357]: 5 ⁠020 ⁠₽
+              - link "Мурманск — Москва 23 фев в 19:05 2ч 25м · прямой 5 ⁠609 ⁠₽ -12% 6 ⁠409 ⁠₽" [ref=e359] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D415265750601695717
+                - generic [ref=e360]:
+                  - generic [ref=e364]:
+                    - generic [ref=e366]: Мурманск — Москва 23 фев в 19:05
+                    - generic [ref=e368]: 2ч 25м · прямой
+                  - generic [ref=e371]:
+                    - generic [ref=e374]:
+                      - generic [ref=e375]: 5 ⁠609 ⁠₽
+                      - generic [ref=e379]: "-12%"
+                    - generic [ref=e383]: 6 ⁠409 ⁠₽
+              - link "Москва — Бухара 13 мар в 00:10 4ч · прямой 7 ⁠850 ⁠₽ -9% 8 ⁠647 ⁠₽" [ref=e385] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D1676590305614236722
+                - generic [ref=e386]:
+                  - generic [ref=e390]:
+                    - generic [ref=e392]: Москва — Бухара 13 мар в 00:10
+                    - generic [ref=e394]: 4ч · прямой
+                  - generic [ref=e397]:
+                    - generic [ref=e400]:
+                      - generic [ref=e401]: 7 ⁠850 ⁠₽
+                      - generic [ref=e405]: "-9%"
+                    - generic [ref=e409]: 8 ⁠647 ⁠₽
+              - link "Москва — Волгоград 23 фев в 19:15 1ч 50м · прямой 3 ⁠181 ⁠₽ -3% 3 ⁠306 ⁠₽" [ref=e411] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D1144848890235716348
+                - generic [ref=e412]:
+                  - generic [ref=e416]:
+                    - generic [ref=e418]: Москва — Волгоград 23 фев в 19:15
+                    - generic [ref=e420]: 1ч 50м · прямой
+                  - generic [ref=e423]:
+                    - generic [ref=e426]:
+                      - generic [ref=e427]: 3 ⁠181 ⁠₽
+                      - generic [ref=e431]: "-3%"
+                    - generic [ref=e435]: 3 ⁠306 ⁠₽
+              - link "Мирный — Красноярск 6 мар в 09:10 1д 9ч 15м · 1 пересадка 11 ⁠251 ⁠₽ -49% 22 ⁠141 ⁠₽" [ref=e437] [cursor=pointer]:
+                - /url: /redirect?to=https%3A%2F%2Fmtp-deeplink.tutu.ru%2Fapi%2Fv1%2Fdeeplink%3Foffer_id%3D487516858686116516
+                - generic [ref=e438]:
+                  - generic [ref=e442]:
+                    - generic [ref=e444]: Мирный — Красноярск 6 мар в 09:10
+                    - generic [ref=e446]: 1д 9ч 15м · 1 пересадка
+                  - generic [ref=e449]:
+                    - generic [ref=e452]:
+                      - generic [ref=e453]: 11 ⁠251 ⁠₽
+                      - generic [ref=e457]: "-49%"
+                    - generic [ref=e461]: 22 ⁠141 ⁠₽
+              - link " Посмотреть все" [ref=e463] [cursor=pointer]:
+                - /url: /juicy-offers/
+                - generic [ref=e464]:
+                  - generic [ref=e466]: 
+                  - generic [ref=e467]: Посмотреть все
+            - generic:  
+        - generic [ref=e476]:
+          - generic [ref=e477]:
+            - heading "Повод для путешествия" [level=2] [ref=e478]
+            - paragraph [ref=e479]: 10 событий, ради которых стоит рвануть в путь
+          - button "Посмотреть все" [ref=e481] [cursor=pointer]:
+            - generic [ref=e485]: Посмотреть все
+          - generic [ref=e487]:
+            - generic [ref=e490]:
+              - generic [ref=e492] [cursor=pointer]:
+                - figure [ref=e493]:
+                  - generic [ref=e497]: Санкт-Петербург
+                  - generic [ref=e500]: 18+
+                  - generic [ref=e503]: от 1 800 ₽
+                  - img "Standup Кирилл Мазур" [ref=e504]
+                - generic [ref=e505]:
+                  - generic [ref=e507]: Standup Кирилл Мазур
+                  - generic [ref=e508]:
+                    - generic [ref=e509]: 28 февраля
+                    - generic [ref=e511]: Лахта Холл
+              - generic [ref=e513] [cursor=pointer]:
+                - figure [ref=e514]:
+                  - generic [ref=e518]: Краснодар
+                  - generic [ref=e521]: 16+
+                  - generic [ref=e524]: от 11 000 ₽
+                  - img "Сергей Безруков. Хулиган. Исповедь." [ref=e525]
+                - generic [ref=e526]:
+                  - generic [ref=e528]: Сергей Безруков. Хулиган. Исповедь.
+                  - generic [ref=e529]:
+                    - generic [ref=e530]: 3 марта
+                    - generic [ref=e532]: Музыкальный театр "Премьера"
+              - generic [ref=e534] [cursor=pointer]:
+                - figure [ref=e535]:
+                  - generic [ref=e539]: Екатеринбург
+                  - generic [ref=e542]: 6+
+                  - generic [ref=e545]: от 2 700 ₽
+                  - img "Иванушки «30 солнечных лет» |г. Екатеринбург" [ref=e546]
+                - generic [ref=e547]:
+                  - generic [ref=e549]: Иванушки «30 солнечных лет» |г. Екатеринбург
+                  - generic [ref=e550]:
+                    - generic [ref=e551]: 4 марта
+                    - generic [ref=e553]: УГМК Арена
+              - generic [ref=e555] [cursor=pointer]:
+                - figure [ref=e556]:
+                  - generic [ref=e560]: Екатеринбург
+                  - generic [ref=e563]: 6+
+                  - generic [ref=e566]: от 1 800 ₽
+                  - img "ДиДюЛя" [ref=e567]
+                - generic [ref=e568]:
+                  - generic [ref=e570]: ДиДюЛя
+                  - generic [ref=e571]:
+                    - generic [ref=e572]: 5 марта
+                    - generic [ref=e574]: ДК им. Окунева
+              - generic [ref=e576] [cursor=pointer]:
+                - figure [ref=e577]:
+                  - generic [ref=e581]: Краснодар
+                  - generic [ref=e584]: 12+
+                  - generic [ref=e587]: 3 500 ₽
+                  - img "Концерт группы \"Кино\"" [ref=e588]
+                - generic [ref=e589]:
+                  - generic [ref=e591]: Концерт группы "Кино"
+                  - generic [ref=e592]:
+                    - generic [ref=e593]: 6 марта
+                    - generic [ref=e595]: ДС Олимп
+              - generic [ref=e597] [cursor=pointer]:
+                - figure [ref=e598]:
+                  - generic [ref=e602]: Санкт-Петербург
+                  - generic [ref=e605]: 6+
+                  - generic [ref=e608]: от 4 000 ₽
+                  - img "NILETTO" [ref=e609]
+                - generic [ref=e610]:
+                  - generic [ref=e612]: NILETTO
+                  - generic [ref=e613]:
+                    - generic [ref=e614]: 6 марта
+                    - generic [ref=e616]: СК Юбилейный
+              - generic [ref=e618] [cursor=pointer]:
+                - figure [ref=e619]:
+                  - generic [ref=e623]: Санкт-Петербург
+                  - generic [ref=e626]: 12+
+                  - generic [ref=e629]: от 4 000 ₽
+                  - img "ARTIK&ASTI" [ref=e630]
+                - generic [ref=e631]:
+                  - generic [ref=e633]: ARTIK&ASTI
+                  - generic [ref=e634]:
+                    - generic [ref=e635]: 7 марта
+                    - generic [ref=e637]: СК Юбилейный
+              - generic [ref=e639] [cursor=pointer]:
+                - figure [ref=e640]:
+                  - generic [ref=e644]: Москва
+                  - generic [ref=e647]: 16+
+                  - generic [ref=e650]: от 2 000 ₽
+                  - img "Концерт электронной команды U108" [ref=e651]
+                - generic [ref=e652]:
+                  - generic [ref=e654]: Концерт электронной команды U108
+                  - generic [ref=e655]:
+                    - generic [ref=e656]: 12 марта
+                    - generic [ref=e658]: Концертный зал «Свобода»
+              - generic [ref=e660] [cursor=pointer]:
+                - figure [ref=e661]:
+                  - generic [ref=e665]: Москва
+                  - generic [ref=e668]: 6+
+                  - generic [ref=e671]: от 3 200 ₽
+                  - img "Татьяна Буланова" [ref=e672]
+                - generic [ref=e673]:
+                  - generic [ref=e675]: Татьяна Буланова
+                  - generic [ref=e676]:
+                    - generic [ref=e677]: 26 марта
+                    - generic [ref=e679]: Live Арена
+              - generic [ref=e681] [cursor=pointer]:
+                - figure [ref=e682]:
+                  - generic [ref=e686]: Москва
+                  - generic [ref=e689]: 12+
+                  - generic [ref=e692]: от 3 300 ₽
+                  - img "Artik & Asti" [ref=e693]
+                - generic [ref=e694]:
+                  - generic [ref=e696]: Artik & Asti
+                  - generic [ref=e697]:
+                    - generic [ref=e698]: 18 апреля
+                    - generic [ref=e700]: Live Арена
+            - generic:
+              - text: 
+              - button "" [ref=e702] [cursor=pointer]:
+                - generic [ref=e706]: 
+        - button "Навигация вперед" [ref=e797] [cursor=pointer]:
+          - generic [ref=e801]: 
+        - generic [ref=e803]:
+          - heading "Идеи для поездок" [level=2] [ref=e807]
+          - generic [ref=e812]:
+            - generic [ref=e814]:
+              - link "Восточные Гавайи Восточные Гавайи Чем заняться на китайском острове Хайнань" [ref=e816] [cursor=pointer]:
+                - /url: https://www.tutu.ru/geo/china/kurort/hainan/
+                - generic [ref=e817]:
+                  - img "Восточные Гавайи" [ref=e819]
+                  - generic [ref=e820]:
+                    - generic [ref=e822]: Восточные Гавайи
+                    - generic [ref=e824]: Чем заняться на китайском острове Хайнань
+              - link "Домбай Домбай Всё про главный горнолыжный курорт Кавказа" [ref=e826] [cursor=pointer]:
+                - /url: https://www.tutu.ru/geo/rossiya/kurort/dombay/
+                - generic [ref=e827]:
+                  - img "Домбай" [ref=e829]
+                  - generic [ref=e830]:
+                    - generic [ref=e832]: Домбай
+                    - generic [ref=e834]: Всё про главный горнолыжный курорт Кавказа
+            - 'link "Филиппины: сменить сезон Филиппины: сменить сезон Пляжи, острова и идеальный климат для зимнего отдыха" [ref=e836] [cursor=pointer]':
+              - /url: https://www.tutu.ru/geo/philippines/article/resorts/
+              - generic [ref=e837]:
+                - 'img "Филиппины: сменить сезон" [ref=e839]'
+                - generic [ref=e840]:
+                  - generic [ref=e842]: "Филиппины: сменить сезон"
+                  - generic [ref=e844]: Пляжи, острова и идеальный климат для зимнего отдыха
+            - generic [ref=e846]:
+              - link "Ледяной Байкал Ледяной Байкал Куда ехать и что посмотреть на зимнем озере" [ref=e848] [cursor=pointer]:
+                - /url: https://www.tutu.ru/geo/rossiya/baikal/article/zimnij-dvuhdnevnyj-marshrut-po-bajkalu/
+                - generic [ref=e849]:
+                  - img "Ледяной Байкал" [ref=e851]
+                  - generic [ref=e852]:
+                    - generic [ref=e854]: Ледяной Байкал
+                    - generic [ref=e856]: Куда ехать и что посмотреть на зимнем озере
+              - link "За сиянием — на Север За сиянием — на Север Маршруты, активности и природа Мурманской области" [ref=e858] [cursor=pointer]:
+                - /url: https://www.tutu.ru/geo/rossiya/kurort/murmanskoblast/
+                - generic [ref=e859]:
+                  - img "За сиянием — на Север" [ref=e861]
+                  - generic [ref=e862]:
+                    - generic [ref=e864]: За сиянием — на Север
+                    - generic [ref=e866]: Маршруты, активности и природа Мурманской области
+              - button "Посмотреть все" [ref=e868] [cursor=pointer]:
+                - generic [ref=e872]: Посмотреть все
+        - generic [ref=e879]:
+          - generic [ref=e882]:
+            - link "Вагон впечатлений Вагон впечатлений В путешествие на поезде от 1 990 ₽ Выбрать тур" [ref=e884] [cursor=pointer]:
+              - /url: https://tours.tutu.ru/train-tours/
+              - generic [ref=e885]:
+                - img "Вагон впечатлений" [ref=e887]
+                - generic [ref=e888]:
+                  - generic [ref=e889]:
+                    - generic [ref=e891]: Вагон впечатлений
+                    - generic [ref=e893]: В путешествие на поезде от 1 990 ₽
+                  - link "Выбрать тур" [ref=e894]:
+                    - generic [ref=e895]: Выбрать тур
+            - link "Узнайте, когда откроется продажа билетов на поезд Узнайте, когда откроется продажа билетов на поезд Подписаться" [ref=e897] [cursor=pointer]:
+              - /url: https://c.tutu.ru/startpoezd
+              - generic [ref=e898]:
+                - img "Узнайте, когда откроется продажа билетов на поезд" [ref=e900]
+                - generic [ref=e901]:
+                  - generic [ref=e904]: Узнайте, когда откроется продажа билетов на поезд
+                  - link "Подписаться" [ref=e905]:
+                    - generic [ref=e906]: Подписаться
+            - link "Вагон впечатлений Вагон впечатлений В путешествие на поезде от 1 990 ₽ Выбрать тур" [ref=e908] [cursor=pointer]:
+              - /url: https://tours.tutu.ru/train-tours/
+              - generic [ref=e909]:
+                - img "Вагон впечатлений" [ref=e911]
+                - generic [ref=e912]:
+                  - generic [ref=e913]:
+                    - generic [ref=e915]: Вагон впечатлений
+                    - generic [ref=e917]: В путешествие на поезде от 1 990 ₽
+                  - link "Выбрать тур" [ref=e918]:
+                    - generic [ref=e919]: Выбрать тур
+            - link "Узнайте, когда откроется продажа билетов на поезд Узнайте, когда откроется продажа билетов на поезд Подписаться" [ref=e921] [cursor=pointer]:
+              - /url: https://c.tutu.ru/startpoezd
+              - generic [ref=e922]:
+                - img "Узнайте, когда откроется продажа билетов на поезд" [ref=e924]
+                - generic [ref=e925]:
+                  - generic [ref=e928]: Узнайте, когда откроется продажа билетов на поезд
+                  - link "Подписаться" [ref=e929]:
+                    - generic [ref=e930]: Подписаться
+            - link "Вагон впечатлений Вагон впечатлений В путешествие на поезде от 1 990 ₽ Выбрать тур" [ref=e932] [cursor=pointer]:
+              - /url: https://tours.tutu.ru/train-tours/
+              - generic [ref=e933]:
+                - img "Вагон впечатлений" [ref=e935]
+                - generic [ref=e936]:
+                  - generic [ref=e937]:
+                    - generic [ref=e939]: Вагон впечатлений
+                    - generic [ref=e941]: В путешествие на поезде от 1 990 ₽
+                  - link "Выбрать тур" [ref=e942]:
+                    - generic [ref=e943]: Выбрать тур
+            - link "Узнайте, когда откроется продажа билетов на поезд Узнайте, когда откроется продажа билетов на поезд Подписаться" [ref=e945] [cursor=pointer]:
+              - /url: https://c.tutu.ru/startpoezd
+              - generic [ref=e946]:
+                - img "Узнайте, когда откроется продажа билетов на поезд" [ref=e948]
+                - generic [ref=e949]:
+                  - generic [ref=e952]: Узнайте, когда откроется продажа билетов на поезд
+                  - link "Подписаться" [ref=e953]:
+                    - generic [ref=e954]: Подписаться
+          - generic:
+            - button "" [ref=e956] [cursor=pointer]:
+              - generic [ref=e960]: 
+            - button "" [ref=e962] [cursor=pointer]:
+              - generic [ref=e966]: 
+        - generic [ref=e968]:
+          - heading "Фишки Туту" [level=2] [ref=e972]
+          - generic [ref=e977]:
+            - generic [ref=e980] [cursor=pointer]:
+              - img "Оплата позже" [ref=e982]
+              - generic [ref=e983]:
+                - generic [ref=e985]: Оплата позже
+                - generic [ref=e987]: Можно зафиксировать цену на билет и выкупить позже
+            - generic [ref=e990] [cursor=pointer]:
+              - img "Кешбэк 3% баллами" [ref=e992]
+              - generic [ref=e993]:
+                - generic [ref=e995]: Кешбэк 3% баллами
+                - generic [ref=e997]: При оплате самолётов, автобусов, отелей и аренды авто Туту Кошельком
+            - generic [ref=e1000] [cursor=pointer]:
+              - img "Поддержка 24/7" [ref=e1002]
+              - generic [ref=e1003]:
+                - generic [ref=e1005]: Поддержка 24/7
+                - generic [ref=e1007]: Операторы помогают в чатах, по электронной почте и телефону
+            - generic [ref=e1010] [cursor=pointer]:
+              - img "Всё и сразу" [ref=e1012]
+              - generic [ref=e1013]:
+                - generic [ref=e1015]: Всё и сразу
+                - generic [ref=e1017]: Удобное сравнение цен сразу на 3 вида транспорта
+        - generic [ref=e1024]:
+          - paragraph [ref=e1025]: Мы вам — письма про акции и классные места, а вы нам — почту
+          - generic [ref=e1026]:
+            - generic [ref=e1028]:
+              - generic [ref=e1029]:
+                - textbox "Электронная почта" [ref=e1030] [cursor=pointer]:
+                  - /placeholder: " "
+                - generic: Электронная почта
+              - text: 
+            - button "Подписаться" [ref=e1031] [cursor=pointer]:
+              - generic [ref=e1032]: Подписаться
+          - generic [ref=e1034] [cursor=pointer]:
+            - checkbox "Даю согласие на обработку персональных данных и рекламные рассылки" [ref=e1037]
+            - generic [ref=e1038]:
+              - text: Даю
+              - link "согласие" [ref=e1039]:
+                - /url: https://www.tutu.ru/2read/legal_information/agreement_lc_mail/#page_content_start
+              - text: на обработку персональных данных и
+              - link "рекламные рассылки" [ref=e1040]:
+                - /url: https://www.tutu.ru/2read/legal_information/newsletter_agreement/#page_content_start
+        - generic [ref=e1042]:
+          - heading "Вопросы и ответы" [level=2] [ref=e1046]
+          - generic [ref=e1051]:
+            - generic [ref=e1053]:
+              - link "Как вернуть билет на самолёт Как вернуть билет на самолёт" [ref=e1055] [cursor=pointer]:
+                - /url: https://avia.tutu.ru/2read/avia/return_lk/#page_content_start
+                - generic [ref=e1056]:
+                  - img "Как вернуть билет на самолёт" [ref=e1058]
+                  - generic [ref=e1061]: Как вернуть билет на самолёт
+              - link "Всё о возврате билета на поезд Всё о возврате билета на поезд" [ref=e1063] [cursor=pointer]:
+                - /url: https://www.tutu.ru/2read/poezda/repayment2/#page_content_start
+                - generic [ref=e1064]:
+                  - img "Всё о возврате билета на поезд" [ref=e1066]
+                  - generic [ref=e1069]: Всё о возврате билета на поезд
+            - link "Что можно изменить в билете на самолёт Что можно изменить в билете на самолёт" [ref=e1071] [cursor=pointer]:
+              - /url: https://avia.tutu.ru/2read/avia/order_change/#page_content_start
+              - generic [ref=e1072]:
+                - img "Что можно изменить в билете на самолёт" [ref=e1074]
+                - generic [ref=e1077]: Что можно изменить в билете на самолёт
+            - generic [ref=e1079]:
+              - link "Как исправить билет на поезд Как исправить билет на поезд" [ref=e1081] [cursor=pointer]:
+                - /url: https://www.tutu.ru/2read/questions/error/#page_content_start
+                - generic [ref=e1082]:
+                  - img "Как исправить билет на поезд" [ref=e1084]
+                  - generic [ref=e1087]: Как исправить билет на поезд
+              - button "Посмотреть все" [ref=e1089] [cursor=pointer]:
+                - generic [ref=e1093]: Посмотреть все
+        - generic [ref=e1095]:
+          - heading "Билеты и отели онлайн для ваших путешествий" [level=1] [ref=e1099]
+          - generic [ref=e1104]:
+            - generic [ref=e1107]:
+              - img "Туту — сервис путешествий. У нас есть расписание рейсов, билеты на поезда, самолёты, автобусы, электрички и аэроэкспрессы. А ещё много отелей, туров и экскурсий" [ref=e1109]
+              - generic [ref=e1112]: Туту — сервис путешествий. У нас есть расписание рейсов, билеты на поезда, самолёты, автобусы, электрички и аэроэкспрессы. А ещё много отелей, туров и экскурсий
+            - generic [ref=e1115]:
+              - img "Мы помогаем путешествовать с 2003 года. Знаем, как поймать билет на поезд, что нужно для въезда в другие страны и где лучше смотреть северное сияние" [ref=e1117]
+              - generic [ref=e1120]: Мы помогаем путешествовать с 2003 года. Знаем, как поймать билет на поезд, что нужно для въезда в другие страны и где лучше смотреть северное сияние
+            - generic [ref=e1123]:
+              - img "Мы верим, что путешествия делают людей умнее и интереснее, расширяют кругозор. Нужно сделать только первый шаг. Начните путешествие к лучшему с Туту!" [ref=e1125]
+              - generic [ref=e1128]: Мы верим, что путешествия делают людей умнее и интереснее, расширяют кругозор. Нужно сделать только первый шаг. Начните путешествие к лучшему с Туту!
+    - generic "Сео блок" [ref=e1129]:
+      - text:      
+      - generic [ref=e1131]:
+        - generic [ref=e1132]:
+          - heading "Авиабилеты" [level=2] [ref=e1133]
+          - generic [ref=e1134]:
+            - heading "Популярные направления" [level=3] [ref=e1136]
+            - list [ref=e1138]:
+              - listitem [ref=e1139]:
+                - link "Из Москвы" [ref=e1140] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/f/Moskva/
+            - list [ref=e1142]:
+              - listitem [ref=e1143]:
+                - link "Из Cанкт-Петербурга" [ref=e1144] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/f/Sankt-peterburg/
+            - heading "Популярные аэропорты" [level=3] [ref=e1146]
+            - list [ref=e1148]:
+              - listitem [ref=e1149]:
+                - link "Шереметьево" [ref=e1150] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airport/0eadeb/
+              - listitem [ref=e1151]:
+                - link "Внуково" [ref=e1152] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airport/e8f8ff/
+            - list [ref=e1154]:
+              - listitem [ref=e1155]:
+                - link "Домодедово" [ref=e1156] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airport/27db84/
+              - listitem [ref=e1157]:
+                - link "Пулково" [ref=e1158] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airport/39845f/
+            - list [ref=e1160]:
+              - listitem [ref=e1161]:
+                - link "Все аэропорты" [ref=e1162] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airport/
+              - listitem [ref=e1163]:
+                - link "Все авиакомпании" [ref=e1164] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/airline/
+              - listitem [ref=e1165]:
+                - link "Самолёты" [ref=e1166] [cursor=pointer]:
+                  - /url: https://avia.tutu.ru/plane/
+        - generic [ref=e1167]:
+          - heading "Поезда" [level=2] [ref=e1168]
+          - generic [ref=e1169]:
+            - heading "Вокзалы" [level=3] [ref=e1171]
+            - list [ref=e1173]:
+              - listitem [ref=e1174]:
+                - link "Москва" [ref=e1175] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/poezda/vkz/%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8B_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B/
+              - listitem [ref=e1176]:
+                - link "Екатеринбург" [ref=e1177] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/poezda/Ekaterinburg/
+            - list [ref=e1179]:
+              - listitem [ref=e1180]:
+                - link "Санкт-Петербург" [ref=e1181] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/poezda/vkz/%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8B_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B0/
+            - heading "Фирменные поезда" [level=3] [ref=e1183]
+            - list [ref=e1185]:
+              - listitem [ref=e1186]:
+                - link "Билеты на «Сапсан»" [ref=e1187] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/poezda/sapsan/
+              - listitem [ref=e1188]:
+                - link "«Ласточка» Москва — Нижний Новгород" [ref=e1189] [cursor=pointer]:
+                  - /url: https://lastochka.tutu.ru/
+              - listitem [ref=e1190]:
+                - link "Люкс Москва — Санкт-Петербург" [ref=e1191] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/poezda/%D1%84%D0%B8%D1%80%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5/%D0%93%D1%80%D0%B0%D0%BD%D0%B4_%D0%AD%D0%BA%D1%81%D0%BF%D1%80%D0%B5%D1%81%D1%81/
+            - heading "Вопросы и ответы" [level=3] [ref=e1193]
+            - list [ref=e1195]:
+              - listitem [ref=e1196]:
+                - link "Как купить электронный билет" [ref=e1197] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/2read/pokupka_bileta/trains_instruction/
+              - listitem [ref=e1198]:
+                - link "Способы оплаты ж/д билета" [ref=e1199] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/2read/trains_payment/trains_cards/
+              - listitem [ref=e1200]:
+                - link "Как найти дешёвый ж/д билет" [ref=e1201] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/2read/questions/cheap_train/
+        - generic [ref=e1202]:
+          - heading "Электрички" [level=2] [ref=e1203]
+          - generic [ref=e1204]:
+            - heading "Популярные направления" [level=3] [ref=e1206]
+            - list [ref=e1208]:
+              - listitem [ref=e1209]:
+                - link "Белорусское" [ref=e1210] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/06.php
+              - listitem [ref=e1211]:
+                - link "Горьковское" [ref=e1212] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/01.php
+              - listitem [ref=e1213]:
+                - link "Казанское" [ref=e1214] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/02.php
+              - listitem [ref=e1215]:
+                - link "Киевское" [ref=e1216] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/05.php
+              - listitem [ref=e1217]:
+                - link "Курское" [ref=e1218] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/04.php
+            - list [ref=e1220]:
+              - listitem [ref=e1221]:
+                - link "Ленинградское" [ref=e1222] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/08.php
+              - listitem [ref=e1223]:
+                - link "Павелецкое" [ref=e1224] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/03.php
+              - listitem [ref=e1225]:
+                - link "Рижское" [ref=e1226] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/07.php
+              - listitem [ref=e1227]:
+                - link "Савёловское" [ref=e1228] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/09.php
+              - listitem [ref=e1229]:
+                - link "Ярославское" [ref=e1230] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/10.php
+            - list [ref=e1232]:
+              - listitem [ref=e1233]:
+                - link "Направления Москвы" [ref=e1234] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/prigorod/
+              - listitem [ref=e1235]:
+                - link "Направления Санкт-Петербурга" [ref=e1236] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/spb/
+        - generic [ref=e1237]:
+          - heading "Автобусы" [level=2] [ref=e1238]
+          - generic [ref=e1239]:
+            - heading "По России" [level=3] [ref=e1241]
+            - list [ref=e1243]:
+              - listitem [ref=e1244]:
+                - link "Москва — Санкт-Петербург" [ref=e1245] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Moskva/gorod_Sankt-Peterburg/
+              - listitem [ref=e1246]:
+                - link "Челябинск — Екатеринбург" [ref=e1247] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Chelyabinsk/gorod_Ekaterinburg/
+              - listitem [ref=e1248]:
+                - link "Москва — Ростов-на-Дону" [ref=e1249] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Moskva/gorod_Rostov-Na-Donu/
+            - heading "На море" [level=3] [ref=e1251]
+            - list [ref=e1253]:
+              - listitem [ref=e1254]:
+                - link "Москва — Симферополь" [ref=e1255] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Moskva/gorod_Simferopol/
+              - listitem [ref=e1256]:
+                - link "Севастополь — Симферополь" [ref=e1257] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Sevastopol/gorod_Simferopol/
+            - list [ref=e1259]:
+              - listitem [ref=e1260]:
+                - link "Москва — Краснодар" [ref=e1261] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Moskva/gorod_Krasnodar/
+            - heading "В СНГ и Европу" [level=3] [ref=e1263]
+            - list [ref=e1265]:
+              - listitem [ref=e1266]:
+                - link "Санкт-Петербург — Таллин" [ref=e1267] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Sankt-Peterburg/gorod_Tallin/
+              - listitem [ref=e1268]:
+                - link "Санкт-Петербург — Хельсинки" [ref=e1269] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Sankt-Peterburg/gorod_Helsinki/
+            - list [ref=e1271]:
+              - listitem [ref=e1272]:
+                - link "Москва — Минск" [ref=e1273] [cursor=pointer]:
+                  - /url: https://bus.tutu.ru/raspisanie/gorod_Moskva/gorod_Minsk/
+        - generic [ref=e1274]:
+          - heading "Отели" [level=2] [ref=e1275]
+          - generic [ref=e1276]:
+            - heading "Отели в России" [level=3] [ref=e1278]
+            - list [ref=e1280]:
+              - listitem [ref=e1281]:
+                - link "Москва" [ref=e1282] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/moscow/
+              - listitem [ref=e1283]:
+                - link "Санкт-Петербург" [ref=e1284] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/saint_petersburg/
+              - listitem [ref=e1285]:
+                - link "Сочи" [ref=e1286] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/sochi/
+              - listitem [ref=e1287]:
+                - link "Казань" [ref=e1288] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/kazan/
+              - listitem [ref=e1289]:
+                - link "Волгоград" [ref=e1290] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/volgograd/
+              - listitem [ref=e1291]:
+                - link "Калининград" [ref=e1292] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/kaliningrad/
+              - listitem [ref=e1293]:
+                - link "Геленджик" [ref=e1294] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/gelendzhik/
+            - list [ref=e1296]:
+              - listitem [ref=e1297]:
+                - link "Псков" [ref=e1298] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/pskov/
+              - listitem [ref=e1299]:
+                - link "Краснодар" [ref=e1300] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/krasnodar/
+              - listitem [ref=e1301]:
+                - link "Екатеринбург" [ref=e1302] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/ekaterinburg/
+              - listitem [ref=e1303]:
+                - link "Грозный" [ref=e1304] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/groznyy/
+              - listitem [ref=e1305]:
+                - link "Ярославль" [ref=e1306] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/yaroslavl/
+              - listitem [ref=e1307]:
+                - link "Суздаль" [ref=e1308] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/suzdal/
+              - listitem [ref=e1309]:
+                - link "Анапа" [ref=e1310] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/anapa/
+              - listitem [ref=e1311]:
+                - link "Все отели в России" [ref=e1312] [cursor=pointer]:
+                  - /url: https://hotel.tutu.ru/c_russia/
+        - generic [ref=e1313]:
+          - heading "Туры" [level=2] [ref=e1314]
+          - generic [ref=e1315]:
+            - list [ref=e1317]:
+              - listitem [ref=e1318]:
+                - link "Горящие туры" [ref=e1319] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/hot_tours/
+            - list [ref=e1321]:
+              - listitem [ref=e1322]:
+                - link "Китай" [ref=e1323] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/china/
+              - listitem [ref=e1324]:
+                - link "Вьетнам" [ref=e1325] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/vietnam/
+            - list [ref=e1327]:
+              - listitem [ref=e1328]:
+                - link "ОАЭ" [ref=e1329] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/united_arab_emirates/
+              - listitem [ref=e1330]:
+                - link "Тайланд" [ref=e1331] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/thailand/
+            - heading "На море" [level=3] [ref=e1333]
+            - list [ref=e1335]:
+              - listitem [ref=e1336]:
+                - link "Египет" [ref=e1337] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/egypt/
+              - listitem [ref=e1338]:
+                - link "Турция" [ref=e1339] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/turkey/
+            - list [ref=e1341]:
+              - listitem [ref=e1342]:
+                - link "Куба" [ref=e1343] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/cuba/
+              - listitem [ref=e1344]:
+                - link "Мальдивы" [ref=e1345] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/maldives/
+            - heading "По России" [level=3] [ref=e1347]
+            - list [ref=e1349]:
+              - listitem [ref=e1350]:
+                - link "Сочи" [ref=e1351] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/rossiya/kurort/sochi/
+              - listitem [ref=e1352]:
+                - link "Калининград" [ref=e1353] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/rossiya/kurort/kaliningrad/
+            - list [ref=e1355]:
+              - listitem [ref=e1356]:
+                - link "Геленджик" [ref=e1357] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/rossiya/kurort/gelendzhik/
+              - listitem [ref=e1358]:
+                - link "Санкт-Петербург" [ref=e1359] [cursor=pointer]:
+                  - /url: https://tours.tutu.ru/strana/rossiya/kurort/saint_petersburg/
+    - contentinfo "footer" [ref=e1360]:
+      - generic [ref=e1361]:
+        - img [ref=e1364]
+        - text:          
+        - generic [ref=e1369]:
+          - generic [ref=e1371]:
+            - paragraph [ref=e1372]: Приложение Туту
+            - generic [ref=e1373]:
+              - img "QR code для установки приложения" [ref=e1374]
+              - generic [ref=e1376]:
+                - button "Доступно в App Store" [ref=e1378] [cursor=pointer]:
+                  - generic [ref=e1382]: 
+                - button "Доступно в Google Play" [ref=e1384] [cursor=pointer]:
+                  - generic [ref=e1388]: 
+                - button "Доступно в AppGallery" [ref=e1390] [cursor=pointer]:
+                  - generic [ref=e1394]: 
+                - button "Доступно в RuStore" [ref=e1396] [cursor=pointer]:
+                  - generic [ref=e1400]: 
+          - generic [ref=e1401]:
+            - text: Компания
+            - list [ref=e1402]:
+              - listitem [ref=e1403]:
+                - link "О нас" [ref=e1404] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1405]:
+                - link "Вакансии" [ref=e1406] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1407]:
+                - link "Контакты" [ref=e1408] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1409]:
+                - link "Правовая информация" [ref=e1410] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e1411]:
+            - text: Путешественникам
+            - list [ref=e1412]:
+              - listitem [ref=e1413]:
+                - link "Подарочные сертификаты" [ref=e1414] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1415]:
+                - link "Промокоды" [ref=e1416] [cursor=pointer]:
+                  - /url: https://c.tutu.ru/promo
+              - listitem [ref=e1417]:
+                - link "Программа лояльности" [ref=e1418] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1419]:
+                - link "Путеводитель по странам" [ref=e1420] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/geo/
+            - text: Партнёрам
+            - list [ref=e1421]:
+              - listitem [ref=e1422]:
+                - link "Стать партнёром" [ref=e1423] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1424]:
+                - link "Реклама на Туту" [ref=e1425] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e1426]:
+                - link "Партнёрская программа" [ref=e1427] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e1428]:
+            - text: Помощь
+            - list [ref=e1429]:
+              - listitem [ref=e1430]:
+                - link "Справочная" [ref=e1431] [cursor=pointer]:
+                  - /url: https://www.tutu.ru/2read/
+              - listitem [ref=e1432]:
+                - link "Обратная связь" [ref=e1433] [cursor=pointer]:
+                  - /url: "#"
+            - generic [ref=e1434]:
+              - generic [ref=e1435]: Мы в социальных сетях
+              - generic [ref=e1436]:
+                - button "Туту в Telegram" [ref=e1438] [cursor=pointer]:
+                  - generic [ref=e1442]: 
+                - button "Туту во ВКонтакте" [ref=e1444] [cursor=pointer]:
+                  - generic [ref=e1448]: 
+                - button "Туту в YouTube" [ref=e1450] [cursor=pointer]:
+                  - generic [ref=e1454]: 
+        - generic [ref=e1457]:
+          - paragraph [ref=e1458]:
+            - text: Используется программный комплекс
+            - link "ООО «Глобус Медиа»" [ref=e1459] [cursor=pointer]:
+              - /url: "#"
+          - paragraph [ref=e1460]:
+            - text: При использовании материалов ссылка на
+            - link "www.tutu.ru" [ref=e1461] [cursor=pointer]:
+              - /url: "#"
+            - text: обязательна
+          - link "Политика обработки персональных данных" [ref=e1462] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=e1464]:
+      - paragraph [ref=e1465]: Мы используем cookies для более удобной работы с сайтом. Подробнее
+      - button "Соглашаюсь" [ref=e1466] [cursor=pointer]:
+        - generic [ref=e1467]: Соглашаюсь
+  - alert [ref=e1468]
+  - iframe [ref=e1469]:
+    
+```
