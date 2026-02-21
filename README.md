@@ -185,7 +185,6 @@ https://darttester981.github.io/aqaDiploma/
 - Детальная информация по каждому тесту
 - Вложения (скриншоты, видео, трейсы)
 - Аналитика и дашборды
-- Интеграция с Jira
 
 ![Allure TestOps](media/screenshots/allure_testops.png)
 
