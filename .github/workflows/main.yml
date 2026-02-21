@@ -48,6 +48,30 @@ jobs:
           echo "⏭ Skipped: $SKIPPED"
           echo "📊 Total: $TOTAL"
       
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+      
+      - name: Allure Report with history
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+      
+      - name: Deploy Allure report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+      
       - name: Setup Allurectl
         if: always()
         uses: allure-framework/setup-allurectl@v1
@@ -116,6 +140,7 @@ jobs:
           MESSAGE="${MESSAGE}📊 Total: *${TOTAL}*%0A%0A"
           MESSAGE="${MESSAGE}👤 Author: ${{ github.actor }}%0A"
           MESSAGE="${MESSAGE}🌿 Branch: ${{ github.ref_name }}%0A%0A"
+          MESSAGE="${MESSAGE}📊 [Allure Report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }})%0A"
           MESSAGE="${MESSAGE}🔗 [Allure TestOps](${{ secrets.ALLURE_ENDPOINT }}/project/${{ secrets.ALLURE_PROJECT_ID }})%0A"
           MESSAGE="${MESSAGE}📋 [GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
           
