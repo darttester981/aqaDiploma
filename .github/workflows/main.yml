@@ -1,10 +1,9 @@
 name: playwright api and ui test
-# Когда запускаем
+
 on:
   push:
     branches:
       - main
-# Ручной запуск
   workflow_dispatch:
 
 jobs:
@@ -13,19 +12,64 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.1
+      
       - name: Setup Node.js environment
         uses: actions/setup-node@v6.2.0
+      
       - name: Установка npm пакеты из package.json
         run: npm ci
+      
       - name: Установка браузеров
         run: npx playwright install --with-deps
+      
       - name: Запускаем тесты
         run: npm t
         continue-on-error: true
+      
+      - name: Get test statistics
+        if: always()
+        id: stats
+        run: |
+          PASSED=$(find allure-results -name '*-result.json' -exec grep -l '"status":"passed"' {} \; 2>/dev/null | wc -l || echo 0)
+          FAILED=$(find allure-results -name '*-result.json' -exec grep -l '"status":"failed"' {} \; 2>/dev/null | wc -l || echo 0)
+          BROKEN=$(find allure-results -name '*-result.json' -exec grep -l '"status":"broken"' {} \; 2>/dev/null | wc -l || echo 0)
+          SKIPPED=$(find allure-results -name '*-result.json' -exec grep -l '"status":"skipped"' {} \; 2>/dev/null | wc -l || echo 0)
+          TOTAL=$((PASSED + FAILED + BROKEN + SKIPPED))
+          
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "broken=$BROKEN" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          
+          echo "✅ Passed: $PASSED"
+          echo "❌ Failed: $FAILED"
+          echo "💥 Broken: $BROKEN"
+          echo "⏭ Skipped: $SKIPPED"
+          echo "📊 Total: $TOTAL"
+      
+      - name: Setup Allurectl
+        if: always()
+        uses: allure-framework/setup-allurectl@v1
+        with:
+          allure-endpoint: ${{ secrets.ALLURE_ENDPOINT }}
+          allure-token: ${{ secrets.ALLURE_TOKEN }}
+      
+      - name: Send results to Allure TestOps
+        if: always()
+        env:
+          ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
+        run: |
+          allurectl upload allure-results \
+            --project-id $ALLURE_PROJECT_ID \
+            --launch-name "Playwright Tests #${{ github.run_number }}" \
+            --launch-tags "github-actions" "playwright" "branch:${{ github.ref_name }}"
+      
       - name: Сгенерировать allure 3 отчет в один файл
         run: npx allure awesome ./allure-results --single-file
         continue-on-error: true
         if: always()
+      
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v6.0.0
         continue-on-error: true
@@ -33,27 +77,49 @@ jobs:
         with:
           name: allure single file
           path: |
-              allure-report/index.html
-              allure-results
-              playwright-report
-
+            allure-report/index.html
+            allure-results
+            playwright-report
+      
       - name: Send Telegram notification
         if: always()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
-          message: |
-            🧪 *Playwright Tests - ${{ job.status }}*
-            
-            *Repository:* ${{ github.repository }}
-            *Branch:* ${{ github.ref_name }}
-            *Commit:* `${{ github.sha }}`
-            *Author:* ${{ github.actor }}
-            
-            *Workflow:* ${{ github.workflow }}
-            *Run:* #${{ github.run_number }}
-            
-            📊 [View Allure Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-            📋 [GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          PASSED="${{ steps.stats.outputs.passed }}"
+          FAILED="${{ steps.stats.outputs.failed }}"
+          BROKEN="${{ steps.stats.outputs.broken }}"
+          SKIPPED="${{ steps.stats.outputs.skipped }}"
+          TOTAL="${{ steps.stats.outputs.total }}"
+          
+          if [ "$TOTAL" -gt 0 ]; then
+            PERCENT=$((PASSED * 100 / TOTAL))
+          else
+            PERCENT=0
+          fi
+          
+          STATUS="${{ job.status }}"
+          if [ "$STATUS" == "success" ]; then
+            EMOJI="✅"
+          else
+            EMOJI="❌"
+          fi
+          
+          MESSAGE="${EMOJI} *Playwright Tests - Run #${{ github.run_number }}*%0A%0A"
+          MESSAGE="${MESSAGE}━━━━━━━━━━━━━━━━%0A"
+          MESSAGE="${MESSAGE}✅ Passed: *${PASSED}* (${PERCENT}%%)%0A"
+          MESSAGE="${MESSAGE}❌ Failed: *${FAILED}*%0A"
+          MESSAGE="${MESSAGE}💥 Broken: *${BROKEN}*%0A"
+          MESSAGE="${MESSAGE}⏭ Skipped: *${SKIPPED}*%0A"
+          MESSAGE="${MESSAGE}━━━━━━━━━━━━━━━━%0A"
+          MESSAGE="${MESSAGE}📊 Total: *${TOTAL}*%0A%0A"
+          MESSAGE="${MESSAGE}👤 Author: ${{ github.actor }}%0A"
+          MESSAGE="${MESSAGE}🌿 Branch: ${{ github.ref_name }}%0A%0A"
+          MESSAGE="${MESSAGE}🔗 [Allure TestOps](${{ secrets.ALLURE_ENDPOINT }}/project/${{ secrets.ALLURE_PROJECT_ID }})%0A"
+          MESSAGE="${MESSAGE}📋 [GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d parse_mode="Markdown" \
+            -d text="${MESSAGE}"
