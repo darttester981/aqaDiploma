@@ -26,7 +26,7 @@ jobs:
         run: npm t
         continue-on-error: true
       
-      - name: Get test statistics
+      - name: Получить статистику тестов
         if: always()
         id: stats
         run: |
@@ -48,7 +48,7 @@ jobs:
           echo "⏭ Skipped: $SKIPPED"
           echo "📊 Total: $TOTAL"
       
-      - name: Get Allure history
+      - name: Получить историю Allure
         uses: actions/checkout@v4
         if: always()
         continue-on-error: true
@@ -56,7 +56,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
       
-      - name: Allure Report with history
+      - name: Allure Report с историей
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
@@ -72,14 +72,14 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
       
-      - name: Setup Allurectl
+      - name: Установка Allurectl
         if: always()
         uses: allure-framework/setup-allurectl@v1
         with:
           allure-endpoint: ${{ secrets.ALLURE_ENDPOINT }}
           allure-token: ${{ secrets.ALLURE_TOKEN }}
       
-      - name: Send results to Allure TestOps
+      - name: Отправка результатов в Allure TestOps
         if: always()
         env:
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
@@ -94,7 +94,7 @@ jobs:
         continue-on-error: true
         if: always()
       
-      - name: Upload a Build Artifact
+      - name: Загрузка Build Artifact
         uses: actions/upload-artifact@v6.0.0
         continue-on-error: true
         if: always()
@@ -105,7 +105,7 @@ jobs:
             allure-results
             playwright-report
       
-      - name: Send Telegram notification
+      - name: Отправить уведомление в Telegram
         if: always()
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
