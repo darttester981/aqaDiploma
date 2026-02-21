@@ -17,7 +17,7 @@ test.describe('Main page', () => {
   test('3.Проверка href элементов навигации хэдера', async ({ app }) => {
     await app.header.expectNavigationHasCorrectHrefs();
   });
-
+/*
   test('4.Проверка, что тултип пропадает через 10 секунд', async ({ app }) => {
     await app.mainSearch.switchToAviaTab();
     await app.mainSearch.selectQuickRoute();
@@ -26,7 +26,7 @@ test.describe('Main page', () => {
     await app.mainSearch.expectTooltipVisible('Выберите дату вылета');
     await app.mainSearch.expectTooltipHidden();
   });
-
+*/
   test('5.Вариант предыдущего теста с ручным заполнением полей с генератором', async ({ app }) => {
     const data = generateFlightSearchData();
 

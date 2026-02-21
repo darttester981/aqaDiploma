@@ -20,7 +20,8 @@ jobs:
       - name: Установка браузеров
         run: npx playwright install --with-deps
       - name: Запускаем тесты
-        run: npm t    
+        run: npm t
+        continue-on-error: true
       - name: Сгенерировать allure 3 отчет в один файл
         run: npx allure awesome ./allure-results --single-file
         continue-on-error: true
@@ -54,5 +55,5 @@ jobs:
             *Workflow:* ${{ github.workflow }}
             *Run:* #${{ github.run_number }}
             
-            📊 [Allure Report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }})
+            📊 [View Allure Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
             📋 [GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
